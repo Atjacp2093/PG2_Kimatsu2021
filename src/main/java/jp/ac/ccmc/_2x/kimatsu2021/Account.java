@@ -1,5 +1,6 @@
 package jp.ac.ccmc._2x.kimatsu2021;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,9 +14,13 @@ public class Account {
 	@GeneratedValue
 	private Long id;
 
+	@Column(name = "name", nullable = false)
 	private String name;
+	@Column(name = "className", nullable = false)
 	private String className;
+	@Column(name = "tel", nullable = false)
 	private String tel;
+	@Column(name = "address", nullable = false)
 	private String address;
 
 	public Account() {
